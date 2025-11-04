@@ -1,0 +1,5 @@
+{
+  "name": "Terminbuchungsformular",
+  "description": "Eine schlanke und moderne Webanwendung, die es Benutzern ermöglicht, einfach Termine zu buchen. Sie verfügt über eine saubere Benutzeroberfläche, intuitive Formularfelder und ein Bestätigungsmodal bei erfolgreicher Übermittlung.",
+  "requestFramePermissions": []
+}
