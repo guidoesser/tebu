@@ -13,7 +13,7 @@ const App: React.FC = () => {
     setTimeout(() => {
       setBookingDetails(data);
       setIsSubmitting(false);
-    }, 2000);
+    }, 1500);
   }, []);
 
   const handleCloseModal = useCallback(() => {
@@ -21,21 +21,25 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8">
-      <main className="w-full max-w-2xl">
-        <div className="text-center mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 tracking-tight">Termin buchen</h1>
-            <p className="mt-4 text-lg text-gray-600">Füllen Sie das Formular unten aus, um Ihren Besuch zu planen.</p>
-        </div>
+    <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 font-sans">
+      <main className="w-full max-w-3xl">
+        <header className="text-center mb-10">
+            <h1 className="text-3xl md:text-4xl font-bold text-slate-800 tracking-tight">
+              Termin buchen
+            </h1>
+            <p className="mt-4 text-lg text-slate-600 max-w-xl mx-auto">
+              Füllen Sie das Formular unten aus, um Ihren Besuch zu planen.
+            </p>
+        </header>
         
-        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
-          <div className="p-8 sm:p-10">
+        <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200/60">
+          <div className="p-8 sm:p-12">
             <BookingForm onSubmit={handleBookingSubmit} isSubmitting={isSubmitting} />
           </div>
         </div>
 
-        <footer className="text-center mt-8 text-gray-500">
-            <p>&copy; {new Date().getFullYear()} Acme Termine. Alle Rechte vorbehalten.</p>
+        <footer className="text-center mt-10 text-slate-500 text-sm">
+            <p>&copy; 2025 Acme Termine. Alle Rechte vorbehalten.</p>
         </footer>
       </main>
 
